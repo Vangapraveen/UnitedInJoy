@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnitedInJoy - Meditation Video Gallery</title>
+    <link rel="stylesheet" href="../styles/meditation.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">UnitedInJoy</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <!-- Sidebar for video titles -->
+      <div id="videoTitles">
+        <h5 class="text-center">Meditation Video Titles</h5>
+        <ul class="list-group">
+          <li class="list-group-item" onclick="scrollToVideo('video1')">
+            Meditation for Beginners
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video2')">
+            Mindfulness Practice for Stress Relief
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video3')">
+            How to Stay Positive During Hard Times
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video4')">
+            Guided Meditation for Relaxation
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video5')">
+            Techniques for a Peaceful Mind
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video6')">
+            Gratitude Meditation Practice
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main content area -->
+      <div class="col-md-9">
+        <h2 class="animated-heading">Meditation Video Gallery</h2>
+        <div id="videoContainer" class="mt-4">
+          <!-- Video Cards -->
+          <div class="video-card" id="video1">
+            <iframe
+              src="https://www.youtube.com/embed/wVSkYKj26qg"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Meditation for Beginners</div>
+          </div>
+          <div class="video-card" id="video2">
+            <iframe
+              src="https://www.youtube.com/embed/AbckuluEdM0"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">
+              Mindfulness Practice for Stress Relief
+            </div>
+          </div>
+          <div class="video-card" id="video3">
+            <iframe
+              src="https://www.youtube.com/embed/uzEkFIzs0IU"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">
+              How to Stay Positive During Hard Times
+            </div>
+          </div>
+          <div class="video-card" id="video4">
+            <iframe
+              src="https://www.youtube.com/embed/Jyy0ra2WcQQ"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Guided Meditation for Relaxation</div>
+          </div>
+          <div class="video-card" id="video5">
+            <iframe
+              src="https://www.youtube.com/embed/GNDO2G6YySA"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Techniques for a Peaceful Mind</div>
+          </div>
+          <div class="video-card" id="video6">
+            <iframe
+              src="https://www.youtube.com/embed/xfD4HaBBc0I"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Gratitude Meditation Practice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function scrollToVideo(videoId) {
+        const videoElement = document.getElementById(videoId);
+        if (videoElement) {
+          videoElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>

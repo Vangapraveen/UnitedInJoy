@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psychometric Evaluation - UnitedInJoy</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="psychometric.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+      <a class="navbar-brand" href="#">UnitedInJoy</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Psychometric Evaluation</h2>
+        <form id="psychometricForm">
+          <div class="form-group">
+            <label>1. How often do you feel sad or hopeless?</label>
+            <select class="form-control" name="question1">
+              <option value="1">Rarely (1)</option>
+              <option value="2">Sometimes (2)</option>
+              <option value="3">Often (3)</option>
+              <option value="4">Always (4)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label
+              >2. How often do you feel little interest or pleasure in doing
+              things?</label
+            >
+            <select class="form-control" name="question2">
+              <option value="1">Rarely (1)</option>
+              <option value="2">Sometimes (2)</option>
+              <option value="3">Often (3)</option>
+              <option value="4">Always (4)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label
+              >3. How often do you have trouble sleeping or sleep too
+              much?</label
+            >
+            <select class="form-control" name="question3">
+              <option value="1">Rarely (1)</option>
+              <option value="2">Sometimes (2)</option>
+              <option value="3">Often (3)</option>
+              <option value="4">Always (4)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>4. How often do you feel tired or have little energy?</label>
+            <select class="form-control" name="question4">
+              <option value="1">Rarely (1)</option>
+              <option value="2">Sometimes (2)</option>
+              <option value="3">Often (3)</option>
+              <option value="4">Always (4)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label
+              >5. How often do you have difficulty concentrating or making
+              decisions?</label
+            >
+            <select class="form-control" name="question5">
+              <option value="1">Rarely (1)</option>
+              <option value="2">Sometimes (2)</option>
+              <option value="3">Often (3)</option>
+              <option value="4">Always (4)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Submit
+          </button>
+        </form>
+
+        <div id="result" class="mt-4" style="display: none">
+          <h3 class="text-center">Evaluation Result</h3>
+          <p id="resultMessage" class="text-center"></p>
+          <p class="text-center">Suggested Actions:</p>
+          <ul id="suggestions" class="text-center"></ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document
+        .getElementById("psychometricForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          let totalScore = 0;
+          const questions = this.querySelectorAll("select");
+          questions.forEach((q) => {
+            totalScore += parseInt(q.value);
+          });
+
+          const resultMessage = document.getElementById("resultMessage");
+          const suggestionsList = document.getElementById("suggestions");
+
+          // Clear previous results
+          suggestionsList.innerHTML = "";
+
+          // Display result message based on the score
+          if (totalScore <= 5) {
+            resultMessage.textContent =
+              "Your score indicates a low level of depression.";
+            suggestionsList.innerHTML +=
+              "<li>Maintain a balanced lifestyle and seek support when needed.</li>";
+          } else if (totalScore <= 10) {
+            resultMessage.textContent =
+              "Your score indicates a moderate level of depression.";
+            suggestionsList.innerHTML +=
+              "<li>Consider talking to a mental health professional.</li>";
+          } else {
+            resultMessage.textContent =
+              "Your score indicates a high level of depression.";
+            suggestionsList.innerHTML +=
+              "<li>It's important to seek immediate professional help.</li>";
+            suggestionsList.innerHTML +=
+              "<li>Go to our <a href='services.html'>services section</a> to watch the content that may help you.</li>";
+          }
+
+          document.getElementById("result").style.display = "block"; // Show results
+        });
+    </script>
+  </body>
+</html>

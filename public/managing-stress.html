@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnitedInJoy - Managing Stress Videos</title>
+    <link rel="stylesheet" href="../styles/managingStress.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">UnitedInJoy</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <!-- Sidebar for video titles -->
+      <div id="videoTitles">
+        <h5 class="text-center">Managing Stress Videos</h5>
+        <ul class="list-group">
+          <li class="list-group-item" onclick="scrollToVideo('video1')">
+            Stress Management Techniques
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video2')">
+            How to Reduce Stress in Daily Life
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video3')">
+            Coping with Stress: Strategies for Parents
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video4')">
+            Mindfulness for Stress Relief
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video5')">
+            Breathing Techniques to Reduce Stress
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video6')">
+            Understanding Stress and Its Effects
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main content area -->
+      <div class="col-md-9">
+        <h2 class="animated-heading">Managing Stress Video Gallery</h2>
+        <div id="videoContainer" class="mt-4">
+          <!-- Video Cards -->
+          <div class="video-card" id="video1">
+            <iframe
+              src="https://www.youtube.com/embed/TYWI929nZKg"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Stress Management Techniques</div>
+          </div>
+          <div class="video-card" id="video2">
+            <iframe
+              src="https://www.youtube.com/embed/grfXR6FAsI8"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">How to Reduce Stress in Daily Life</div>
+          </div>
+          <div class="video-card" id="video3">
+            <iframe
+              src="https://www.youtube.com/embed/WuyPuH9ojCE"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">
+              Coping with Stress: Strategies for Parents
+            </div>
+          </div>
+          <div class="video-card" id="video4">
+            <iframe
+              src="https://www.youtube.com/embed/Ia_xvjrEWwc"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Mindfulness for Stress Relief</div>
+          </div>
+          <div class="video-card" id="video5">
+            <iframe
+              src="https://www.youtube.com/embed/o18I23HCQtE"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Breathing Techniques to Reduce Stress</div>
+          </div>
+          <div class="video-card" id="video6">
+            <iframe
+              src="https://www.youtube.com/embed/LSDTglSLx9c"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Understanding Stress and Its Effects</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function scrollToVideo(videoId) {
+        const videoElement = document.getElementById(videoId);
+        if (videoElement) {
+          videoElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>

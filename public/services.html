@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnitedInJoy - Services</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="services-styles.css" />
+    <style>
+      /* Set the background gradient */
+      body {
+        background: linear-gradient(
+          to right,
+          #0099ff,
+          #66ff99
+        ); /* Gradient from blue to green */
+        color: #333; /* Default text color */
+        font-family: "Arial", sans-serif; /* Font family */
+      }
+
+      /* Adjust the services section styles */
+      .services-section {
+        padding: 50px 0; /* Additional padding for better spacing */
+      }
+
+      h2 {
+        font-weight: bold; /* Make the heading bold */
+        color: #fff; /* Change heading color to white */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+        animation: fadeIn 1s ease; /* Fade-in animation for heading */
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Button styles */
+      .btn-outline-light {
+        color: #fff; /* Change text color of buttons */
+        border-color: #fff; /* Change border color of buttons */
+        position: relative; /* Positioning for pseudo-elements */
+        overflow: hidden; /* Hide overflowing parts */
+        transition: all 0.4s ease; /* Smooth transition */
+      }
+
+      /* Hover effect for buttons */
+      .btn-outline-light::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2); /* Light overlay */
+        transition: width 0.4s ease, left 0.4s ease; /* Smooth transition */
+      }
+
+      .btn-outline-light:hover::before {
+        width: 100%; /* Full width on hover */
+        left: 0; /* Move to left */
+      }
+
+      .btn-outline-light:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+        transform: translateY(-5px); /* Lift effect */
+      }
+
+      /* Add shadow effect on buttons */
+      .btn {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+      }
+
+      /* Additional styles for responsiveness */
+      @media (max-width: 768px) {
+        h2 {
+          font-size: 28px; /* Adjust font size for smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">UnitedInJoy</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Services Section -->
+    <div class="services-section">
+      <div class="container py-5 text-center">
+        <h2 class="text-white mb-4">Our Core Services</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <a href="depression.html" class="btn btn-outline-light w-100 shadow"
+              >Dealing with Depression</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <a
+              href="relaxing-music.html"
+              class="btn btn-outline-light w-100 shadow"
+              >Relaxing Music</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <a href="parenting.html" class="btn btn-outline-light w-100 shadow"
+              >Parenting</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <a
+              href="meditations.html"
+              class="btn btn-outline-light w-100 shadow"
+              >Meditations</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <a
+              href="book-summaries.html"
+              class="btn btn-outline-light w-100 shadow"
+              >Book Summaries</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <a
+              href="managing-stress.html"
+              class="btn btn-outline-light w-100 shadow"
+              >Managing Stress</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <a href="sleeping.html" class="btn btn-outline-light w-100 shadow"
+              >Sleeping Better</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <a href="experince.html" class="btn btn-outline-light w-100 shadow"
+              >Give Me Your Experiences</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

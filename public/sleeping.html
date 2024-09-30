@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnitedInJoy - Sleep Better Videos</title>
+
+    <link rel="stylesheet" href="../styles/sleep.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">UnitedInJoy</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <!-- Sidebar for video titles -->
+      <div id="videoTitles">
+        <h5 class="text-center">Sleep Better Videos - Titles</h5>
+        <ul class="list-group">
+          <li class="list-group-item" onclick="scrollToVideo('video1')">
+            Sleep Meditation for Insomnia
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video2')">
+            Sleep Music Delta Waves
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video3')">
+            8 Hour Sleep Music
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video4')">
+            Relaxing Music for Sleep
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video5')">
+            Deep Sleep Music
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video6')">
+            Calming Music for Sleep
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video7')">
+            Guided Sleep Meditation
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main content area -->
+      <div class="col-md-9">
+        <h2 class="animated-heading">Sleep Better Videos</h2>
+        <div id="videoContainer" class="mt-4">
+          <!-- Video Cards -->
+          <div class="video-card" id="video1">
+            <iframe
+              src="https://www.youtube.com/embed/tbIFDyX6ga8"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Sleep Meditation for Insomnia</div>
+          </div>
+          <div class="video-card" id="video2">
+            <iframe
+              src="https://www.youtube.com/embed/nMDHjVVj3bA"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Sleep Music Delta Waves</div>
+          </div>
+          <div class="video-card" id="video3">
+            <iframe
+              src="https://www.youtube.com/embed/8TDcGYmEgyM"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">8 Hour Sleep Music</div>
+          </div>
+          <div class="video-card" id="video4">
+            <iframe
+              src="https://www.youtube.com/embed/YQgyoX-1qq0"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Relaxing Music for Sleep</div>
+          </div>
+          <div class="video-card" id="video5">
+            <iframe
+              src="https://www.youtube.com/embed/LWGSwfchz_A"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Deep Sleep Music</div>
+          </div>
+          <div class="video-card" id="video6">
+            <iframe
+              src="https://www.youtube.com/embed/rCSCPujLs14"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Calming Music for Sleep</div>
+          </div>
+          <div class="video-card" id="video7">
+            <iframe
+              src="https://www.youtube.com/embed/aIIEI33EUqI"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Guided Sleep Meditation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function scrollToVideo(videoId) {
+        const videoElement = document.getElementById(videoId);
+        if (videoElement) {
+          videoElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>

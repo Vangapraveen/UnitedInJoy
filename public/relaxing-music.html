@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnitedInJoy - Relax Music Gallery</title>
+    <link rel="stylesheet" href="../styles/relaxing-music.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">UnitedInJoy</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <!-- Sidebar for video titles -->
+      <div id="videoTitles">
+        <h5 class="text-center">Relax Music - Video Titles</h5>
+        <ul class="list-group">
+          <li class="list-group-item" onclick="scrollToVideo('video1')">
+            Relaxing Music for Stress Relief
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video2')">
+            Calming Music for Meditation
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video3')">
+            Peaceful Music for Sleep
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video4')">
+            Nature Sounds for Relaxation
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video5')">
+            Soothing Instrumental Music
+          </li>
+          <li class="list-group-item" onclick="scrollToVideo('video6')">
+            Healing Music for the Soul
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main content area -->
+      <div class="col-md-9">
+        <h2 class="animated-heading">Relax Music Video Gallery</h2>
+        <div id="videoContainer" class="mt-4">
+          <!-- Video Cards -->
+          <div class="video-card" id="video1">
+            <iframe
+              src="https://www.youtube.com/embed/UfcAVejslrU"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Relaxing Music for Stress Relief</div>
+          </div>
+          <div class="video-card" id="video2">
+            <iframe
+              src="https://www.youtube.com/embed/WNcsUNKlAKw"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Calming Music for Meditation</div>
+          </div>
+          <div class="video-card" id="video3">
+            <iframe
+              src="https://www.youtube.com/embed/vNwYtllyt3Q"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Peaceful Music for Sleep</div>
+          </div>
+          <div class="video-card" id="video4">
+            <iframe
+              src="https://www.youtube.com/embed/dVNdTXEJv1A"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Nature Sounds for Relaxation</div>
+          </div>
+          <div class="video-card" id="video5">
+            <iframe
+              src="https://www.youtube.com/embed/7maJOI3QMu0"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Soothing Instrumental Music</div>
+          </div>
+          <div class="video-card" id="video6">
+            <iframe
+              src="https://www.youtube.com/embed/NAEppFUWLfc"
+              allowfullscreen
+            ></iframe>
+            <div class="video-title">Healing Music for the Soul</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function scrollToVideo(videoId) {
+        const videoElement = document.getElementById(videoId);
+        if (videoElement) {
+          videoElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>
