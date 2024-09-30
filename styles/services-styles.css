@@ -1,0 +1,84 @@
+/* Set the background gradient */
+body {
+    background: linear-gradient(to right, #0099ff, #66ff99); /* Gradient from blue to green */
+    color: #333; /* Default text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation bar styling */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Increase brand font size */
+}
+
+/* Services section styles */
+.services-section {
+    padding: 50px 0; /* Additional padding for better spacing */
+}
+
+h2 {
+    font-weight: bold; /* Make the heading bold */
+    color: #fff; /* Change heading color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+    animation: fadeIn 1s ease; /* Fade-in animation for heading */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button styles */
+.btn-outline-light {
+    color: #fff; /* Change text color of buttons */
+    border-color: #fff; /* Change border color of buttons */
+    position: relative; /* Positioning for pseudo-elements */
+    overflow: hidden; /* Hide overflowing parts */
+    transition: all 0.4s ease; /* Smooth transition */
+}
+
+/* Hover effect for buttons */
+.btn-outline-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth transition */
+}
+
+.btn-outline-light:hover::before {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Move to left */
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Add shadow effect on buttons */
+.btn {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+}

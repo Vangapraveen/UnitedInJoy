@@ -1,0 +1,217 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Reset some defaults */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+/* Navbar links hover with orange color */
+/* Nav Bar */
+.navbar {
+    background-color: #f8f9fa; /* Light background for navbar */
+}
+
+/* Nav bar links default state */
+.navbar-nav .nav-link {
+    color: #343a40; /* Dark grey/black color for nav links */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Nav bar links hover effect */
+.navbar-nav .nav-link:hover {
+    color: #ff8c00; /* Orange color on hover */
+    text-decoration: underline; /* Optional: underline effect on hover */
+}
+/* Hero Section */
+#hero {
+    background: url('../images/pexels-keegan-houser-557040-1478685.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    animation: fadeInHero 2s ease-in-out;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeInText 2s ease-in-out;
+}
+
+#hero .btn {
+    background-color: #343a40; /* Dark grey/black background */
+    color: white; /* White text color */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 30px; /* Padding for the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for "Explore Our Services" button */
+#hero .btn:hover {
+    background-color: #ff8c00; /* Orange background on hover */
+    color: white; /* Keep white text on hover */
+    border: 1px solid #ff8c00; /* Optional border for hover effect */
+}
+
+/* Animations */
+@keyframes fadeInHero {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Features Section */
+#features h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #007bff;
+    animation: fadeInText 1.5s ease-in-out;
+}
+
+.feature-box {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.feature-box p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Story Section */
+#story {
+    background-color: #f0f0f0;
+    padding: 4rem 0;
+    animation: fadeInStory 2s ease;
+}
+
+#story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+#story p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeInText 1.5s ease;
+}
+
+#story img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 2s ease-in-out;
+}
+
+/* Animations for Story Section */
+@keyframes slideInRight {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Hoverable Images Section */
+#hover-images h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.hover-box {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hover-box img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 250px;
+    transition: transform 0.3s ease;
+}
+
+.hover-box img:hover {
+    transform: scale(1.1);
+}
+
+.hover-box h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Footer (if any added later) */
+footer {
+    background-color: #343a40;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}

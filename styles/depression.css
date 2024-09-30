@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    background-color: #181818; /* Dark background */
+    color: #fff; /* Light text color */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #202020; /* Darker navbar */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #bb86fc; /* Light purple hover */
+}
+
+/* Container for the main content */
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+/* Sidebar with video titles */
+#videoTitles {
+    background-color: #202020;
+    padding: 30px 20px;
+    height: 100vh;
+    position: fixed; /* Fixed position on the left */
+    width: 20%; /* Sidebar takes 20% of the width */
+    overflow-y: auto; /* Scroll if titles are too many */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#videoTitles .list-group-item {
+    background-color: #282828;
+    color: #fff;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+#videoTitles .list-group-item:hover {
+    background-color: #404040;
+    color: #bb86fc;
+}
+
+/* Right Side: Video Cards and Main Content */
+.col-md-9 {
+    margin-left: 22%; /* Push the content to the right of the sidebar */
+    padding: 30px;
+}
+
+.animated-heading {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation for the heading */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Video Container */
+#videoContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-gap: 20px; /* Space between the cards */
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Video Card Styling */
+.video-card {
+    background-color: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.video-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Iframe */
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+/* Video Title */
+.video-title {
+    padding: 15px;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: bold;
+    background-color: #303030;
+}
+
+/* Hover effect for video title */
+.video-card:hover .video-title {
+    color: #bb86fc;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make sure the video cards adjust on mobile */
+@media (max-width: 768px) {
+    .col-md-9 {
+        margin-left: 0; /* Remove the left margin on mobile */
+        padding: 20px;
+    }
+
+    #videoTitles {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    #videoContainer {
+        grid-template-columns: 1fr; /* Stack video cards in one column */
+    }
+}

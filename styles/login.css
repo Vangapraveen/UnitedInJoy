@@ -1,0 +1,65 @@
+/* login.css */
+
+/* General Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text color for contrast */
+    font-family: 'Arial', sans-serif; /* Font style */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1F1F1F; /* Dark navbar background */
+}
+
+.navbar-brand, .nav-link {
+    color: #E0E0E0; /* Light navbar link color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #BB86FC; /* Color on hover */
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 500px; /* Set a max width for the container */
+    margin: auto; /* Center the container */
+    padding-top: 70px; /* Space from top to avoid overlap with navbar */
+}
+
+h2 {
+    color: #BB86FC; /* Heading color */
+    text-align: center; /* Center heading */
+    font-size: 2.5rem; /* Font size for heading */
+    margin-bottom: 1.2rem; /* Margin below heading */
+}
+
+/* Input Section Styles */
+.form-control {
+    background-color: #2B2B2B; /* Dark input background */
+    color: #E0E0E0; /* Light input text */
+    border: 1px solid #BB86FC; /* Light border for input */
+}
+
+.form-control:focus {
+    background-color: #3B3B3B; /* Darker background on focus */
+    border-color: #BB86FC; /* Light border on focus */
+}
+
+/* Button Styles */
+.btn {
+    background-color: #BB86FC; /* Button background */
+    color: #121212; /* Button text color */
+}
+
+.btn:hover {
+    background-color: #3700B3; /* Darker shade on hover */
+}
+
+/* Additional Styles */
+.forgot-password {
+    color: #BB86FC; /* Color for forgot password link */
+}
+.forgot-password:hover {
+    text-decoration: underline; /* Underline on hover */
+}
